@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-//#include <string>
+//#include <string.h>
 #include <stdlib.h>
 
  int x;
@@ -67,7 +67,24 @@ void myfunction(){
        scanf("%d",&withdraw);
 amount3=amount1+deposit;
 amount2=amount3-withdraw;
-       if(withdraw>=amount3){printf(" \n\tError!!!..The amount you want to withdraw is more than your account balance.\n");}
+       if(withdraw>=amount3){printf(" \n\tError!!!..The amount you want to withdraw is more than your account balance.\n");
+			 printf("\n\tPress 0 to go back to the main menu or any other key to exit.: ");
+            scanf("%d",&y);
+            if(y==0){
+            myfunction();
+            }      
+			    }
+	   
+	   else if(withdraw<0){printf(" \n\tError!!..You have entered an invalid number\n");
+
+       printf("\n\tPress 0 to go back to the main menu or any other key to exit.: ");
+            scanf("%d",&y);
+            if(y==0){
+            myfunction();
+            }
+
+	   
+	   
        else{
             printf(" \n\tConfirmed you have received ksh %d.00 Your new account balance is ksh %d.00 .\n",withdraw,amount2);
             printf("\n\t***********|Thank you for using our services|**************\n\n");
